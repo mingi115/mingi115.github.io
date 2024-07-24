@@ -13,7 +13,6 @@ body {
 }
 a {
   color: black;
-  text-decoration: none;
 }
 th{
   font-weight: normal;
@@ -23,15 +22,66 @@ tr{
   display: flex;
   flex-direction: row;
 }
-.bigTitle{
+.contentContainer {
+  padding : 100px 100px 30px 100px;
+}
 
+.contentContainer > div{
+  margin-bottom: 50px;
+}
+.bigTitle{
   font-weight: 700;
   font-size: 1.675rem;
   color: rgba(84, 119, 173);
+  margin-bottom: 10px;
 }
-
 .littleTitle{
   font-size: 1.35rem;
   font-weight: 700;
   color: rgba(84, 119, 173);
+  margin-bottom: 10px;
+}
+.info > .infoWrapper {
+  padding-bottom: 0;
+  border-bottom : none;
+}
+.infoWrapper{
+  width: 100%;
+  padding-bottom: 20px;
+  border-bottom: solid rgba(229, 231, 235) 0.01rem;
+}
+.infoWrapper ul {
+  margin-bottom: 30px;
+}
+.aboutMe{
+  margin-right: 50px;
+}
+.myInfo{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.yearMonth {
+  font-size: 0.7rem;
+  color: rgba(107, 114, 128)
+}
+
+.infoTitle{
+  width : 150px;
+}
+.infoLabel {
+  font-weight: bold;
+  width: 70px;
+}
+
+.licenseTable th{
+  font-weight: bold;
+  width: 220px;
+  margin-bottom: 5px;
+}
+.licenseTable td{
+  width: 220px;
+  margin-bottom: 5px;
 }

@@ -10,9 +10,10 @@ body {
   vertical-align: top;
   align-content: start;
   letter-spacing: .025em;
+
 }
 a {
-  color: black;
+  /**color: black;*/
 }
 th{
   font-weight: normal;
@@ -39,6 +40,7 @@ tr{
   font-size: 1.35rem;
   font-weight: 700;
   color: rgba(84, 119, 173);
+  margin-top: 30px;
   margin-bottom: 10px;
 }
 .info > .infoWrapper {
@@ -47,12 +49,20 @@ tr{
 }
 .infoWrapper{
   width: 100%;
-  padding-bottom: 20px;
+  padding-bottom: 50px;
   border-bottom: solid rgba(229, 231, 235) 0.01rem;
 }
 .infoWrapper ul {
   margin-bottom: 30px;
 }
+.infoContent {
+  font-size: 16px;
+}
+
+.project .infoContent{
+  padding-left: 10px;
+}
+
 .aboutMe{
   margin-right: 50px;
 }
@@ -84,4 +94,47 @@ tr{
 .licenseTable td{
   width: 220px;
   margin-bottom: 5px;
+}
+.sampleImg {
+  height :144px;
+  float: right;
+  border: 1px solid black;
+  cursor: pointer;
+}
+.sampleImg:hover {opacity: 0.8;}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  overflow: auto;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modalContent {
+  margin: auto;
+  display: block;
+  width: 80%;
+  height: auto;
+  max-width: 1000px;
+  border-radius: 10px;
+  animation-name: zoom;
+  animation-duration: 0.8s;
+}
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.close:hover, .close:focus{
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
 }

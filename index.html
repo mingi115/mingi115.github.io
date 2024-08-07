@@ -84,38 +84,42 @@
     <table class="infoWrapper">
       <tr>
         <th class="infoTitle">
-          <p class="title">Backend</p>
+          <p class="title"><b>Backend</b></p>
         </th>
         <th class="infoContent">
           <ul>
             <li>JAVA</li>
-            <li>Spring</li>
+            <li>Spring, 전자정부프레임워크</li>
             <li>Postgrsql, PostGIS, PgRouting</li>
-            <li>CentOS</li>
+            <li>CentOS, Rocky Linux</li>
           </ul>
         </th>
       </tr>
       <tr>
         <th class="infoTitle">
-          <p class="title">Frontend</p>
+          <p class="title"><b>Frontend</b></p>
         </th>
         <th class="infoContent">
           <ul>
+            <li>JSP, JSTL</li>
+            <li>JQUERY</li>
             <li>JavaScript</li>
-            <li>Openlayers</li>
+            <li>Openlayers, JSTS</li>
             <li>HTML5, CSS3</li>
           </ul>
         </th>
       </tr>
       <tr>
         <th class="infoTitle">
-          <p class="title">Tools</p>
+          <p class="title"><b>Tools</b></p>
         </th>
         <th class="infoContent">
           <ul>
             <li>Git, GitHub</li>
             <li>Postman</li>
             <li>Eclipse, IntelliJ IDEA</li>
+            <li>DataGrip, PgAdmin</li>
+            <li>QGis, GeoServer</li>
           </ul>
         </th>
       </tr>
@@ -131,12 +135,53 @@
           <p class="yearMonth">대리</p>
         </th>
         <th class="infoContent">
-          데이터 거래 플랫폼 회사인 피타그래프에서 공간 데이터 조회 플랫폼의 개발 및 유지보수를 주로 맡았습니다.<br/>
+          데이터 거래 및 시각화 플랫폼 회사인 피타그래프에서 <br/>
+          시계열을 포함한 공간 데이터 조회 플랫폼의 개발 및 유지보수를 주로 맡았습니다.<br/>
           해당 회사에서 새로 개발하는 프로젝트에 참여함으로써 기획, 설계, 개발 모두 참여 할 수 있었고,<br/>
           나아가 사용자 및 관리자의 편의를 위한 추가 기능을 스스로 기획하고 성능을 개선하는 다양한 경험을 할수 있었습니다.<br/>
           <br/>
-          <b>하이퍼맵</b><br/>
-          asd
+          하위 기술한 프로젝트에서<br/>
+          프론트엔드에서 Openlayers, JSTS, GeoServer를 활용한 지도 제어 부분을 맡았고<br/>
+          백엔드에선 API 서버 개발과 DB 데이터 관리를 맡았습니다.
+          <br/>
+          <br/>
+          <b>하이퍼맵</b>(20년4월 ~ 24년1월)<br/>
+          <ul>
+            <li>시간과 영역 그리고 데이터 종류를 선택하여 지도상에 시각화 하거나 데이터 다운로드가 주력인 프로젝트입니다.</li>
+            <li>기획, 설계, 개발 모두 참여한 프로젝트입니다.</li>
+            <li>프론트엔드에서 Openlayers, JSTS, GeoServer를 활용한 지도 제어 부분을 맡아 개발하였습니다.</li>
+            <li>백엔드에선 API 서버 일체와 DB 데이터 관리를 맡았습니다.</li>
+            <li>대표 개발 기능으로는 데이터 조회시 소지한 데이터와 다른 시간 단위에 대한 조회를 위해 데이터 합산 및 분할 기능이 있습니다.</li>
+            <li>직접 기획하고 개발한 기능으로는 시계열을 이용한 poi 및 주제도 재생 기능, <br/>
+              엑셀 파일을 이용한 poi 데이터 업로드, 지도 중심 좌표의 시군구 표시기능 등이 있습니다.</li>
+            <li>그 외 API 응답속도 개선 경험이 있습니다.</li>
+          </ul>
+
+          <br/>
+          <b>우리마을지도</b>(21년6월 ~ 23년12월)<br/>
+          <ul>
+            <li>하이퍼맵에서 poi 관련 기능을 다듬고 강화하여 지자체에 납품한 프로젝트입니다.</li>
+            <li>기획, 설계, 개발 모두 참여한 프로젝트입니다.</li>
+            <li>다량의 poi를 불러올 시 브라우저 버벅임을 해소하기 위해 네이버 지도를 모방하여,<br/>
+             최대 poi 갯수를 제한하고 지도를 확대 할수록 정확도를 높일 수 있도록 수정했습니다.</li>
+            <li>카카오 지도의 로드뷰 기능을 openlayers와 연동하여 사용자가 poi주변을 확인할 수 있도록 기능을 추가했습니다.</li>
+          </ul>
+
+          <br/>
+          <b>상권분석</b>(20년6월 ~ 23년12월)<br/>
+          <ul>
+            <li>지자체의 상권 데이터를 지도상에 표현하여 한눈에 파악할 수 있게 하는 프로젝트 입니다.</li>
+            <li>대표기능으로 선택한 업종에 대한 상권 추천, 선택한 상권에 대한 데이터 보고서,<br/>
+              제로페이 및 온누리상품권 사용처 조회가 있습니다.</li>
+            <li>직접 기획하고 개발한 기능으로는 관리의 편의성 및 데이터 최신화를 위해 스프링 스케쥴러를 이용하여<br/>
+              매일 한국간편결제진흥원 API 통해 데이터를 업데이트하는 기능을 개발하였습니다.</li>
+          </ul>
+          <br/>
+          <b>오작</b>(23년4월 ~ 23년9월)<br/>
+          <ul>
+            <li>피타그래프의 그래프 시각화 플랫폼의 데이터 중계 프로젝트.</li>
+            <li>납품된 그래프 시각화 서비스간의 데이터를 검색하고 조회를 가능하도록 중계하는 API서버 개발.</li>
+          </ul>
         </th>
       </tr>
     </table>
@@ -146,15 +191,52 @@
     <table class="infoWrapper">
       <tr>
         <th class="infoTitle">
-          <p class="yearMonth">2021.04~2024.02</p>
-          <p class="title">피타그래프</p>
-          <p class="yearMonth">대리</p>
+          <p class="yearMonth">2022.12~2023.02</p>
+          <p class="title">drivingDistance</p>
+          <br/>
+          <img class="sampleImg" src="images/drivingDistance.png" alt="drivingDistance 프로젝트의 샘플사진" >
         </th>
-        <th class="infoContent">어쩌구 저쩌구</th>
+        <th class="infoContent">
+
+          통계청의 지도 서비스 SGIS에서 제공하는 주행거리 기능을 사용해보고 <br/>
+          '아, 나도 이 기능을 구현해 보고 싶다.' 라는 생각으로 시작하게된 토이 프로젝트입니다.<br/>
+          특정 지점을 선택하여 설정한 주행거리 만큼의 주행거리 면적을 계산하여 지도위에 표시해주고<br/>
+          지점이 여러개일 경우 교집합을 구하여 하얀색 영역으로 표시해주는 기능을 가지고 있습니다.<br/>
+          해당 기능을 구현하기 위해 직접 PgRouting 공식문서를 번역하고 정리하며 걔발을 진행 해봤습니다.
+
+          <br/>
+          <br/><a href="https://drive.google.com/file/d/1dHQd5OVWZznSxVqxILs0z4s8ZbIp6o8c/view?usp=drive_link" target="_blank">pg routing을 활용한
+          주행거리 면적계산.pdf</a>
+        </th>
       </tr>
     </table>
   </div>
 
 
 </div>
+<div class="modal">
+  <span class="close">&times;</span>
+  <img class="modalContent">
+</div>
+<script>
+  const modal = document.querySelector(".modal");
+  const img = document.querySelector(".sampleImg");
+  const modal_img = document.querySelector(".modalContent");
+  const span = document.querySelector(".close");
+
+  img.addEventListener('click', ()=>{
+    modalDisplay("block");
+    modal_img.src = img.src;
+  });
+  span.addEventListener('click', ()=>{
+    modalDisplay("none");
+  });
+  modal.addEventListener('click', ()=>{
+    modalDisplay("none");
+  });
+  function modalDisplay(text){
+    modal.style.display = text;
+  }
+
+</script>
 </body>

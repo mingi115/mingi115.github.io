@@ -2,243 +2,275 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>정민기의 이력서</title>
-  <link rel="stylesheet" as="style" crossorigin
-        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>민기 & 지현 결혼합니다</title>
+  <meta property="og:title" content="민기 & 지현 결혼합니다">
+  <meta property="og:description" content="2026년 6월 13일 토요일 오후 12시">
+  <meta property="og:image" content="images/main.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
-<div class="contentContainer">
-  <div class="myInfo">
-    <div class="aboutMe">
-      <div class="bigTitle">👩🏻‍💻ABOUT ME</div>
-      <div class="aboutMeText">
-        안녕하세요. JAVA 기반 웹 풀스택 개발자 정민기 입니다.<br/>
-        성인이 되고 방황하다, 개발자로 진로를 정하고 4년 되었습니다.<br/>
-        개발자로써 아직 더 많이 배우고 노력 해야함을 알지만,<br/>
-        어렵게 찾은 만큼 저에게 더욱 소중한 일이기도 합니다.<br/>
-        끊임없이 정진하는 개발자 정민기가 되겠습니다.
+  <div class="wrapper">
+
+    <!-- 커버 -->
+    <section id="cover">
+      <img src="images/main.png" alt="결혼합니다" class="cover-image">
+      <div class="cover-names">
+        <span class="groom-name">정민기</span>
+        <span class="name-dot">&middot;</span>
+        <span class="bride-name">조지현</span>
       </div>
+      <p class="cover-date">2026. 06. 13. SAT PM 12:00</p>
+      <p class="cover-venue">더그랜드호텔 3층 그랜드볼룸</p>
+      <div class="scroll-indicator">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#A682B8" stroke-width="2">
+          <path d="M7 10l5 5 5-5"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- 인사말 -->
+    <section id="greeting" class="fade-in">
+      <h2 class="section-title">인사말</h2>
+      <div class="section-divider"></div>
+      <p class="greeting-text">
+        서로 다른 길을 걸어온 두 사람이<br>
+        이제 같은 길을 함께 걸어가려 합니다.<br><br>
+        저희 두 사람이 사랑의 이름으로<br>
+        지금껏 받아온 여러분의 축복 속에서<br>
+        한 가정을 이루게 되었습니다.<br><br>
+        오셔서 축하해 주시면<br>
+        더없는 기쁨으로 간직하겠습니다.
+      </p>
+      <div class="parents-info">
+        <p class="parent-line"><span class="parent-name">정○○ · 정○○</span>의 아들 <b>민기</b></p>
+        <p class="parent-line"><span class="parent-name">조○○ · 조○○</span>의 딸 <b>지현</b></p>
+      </div>
+    </section>
+
+    <!-- 예식 안내 -->
+    <section id="info" class="fade-in alt-bg">
+      <h2 class="section-title">예식 안내</h2>
+      <div class="section-divider"></div>
+
+      <div class="wedding-date-display">
+        <p class="date-main">2026년 6월 13일 토요일</p>
+        <p class="date-time">오후 12시</p>
+      </div>
+
+      <!-- 달력 -->
+      <div class="calendar">
+        <div class="calendar-header">2026년 6월</div>
+        <div class="calendar-grid">
+          <span class="day-label sun">일</span>
+          <span class="day-label">월</span>
+          <span class="day-label">화</span>
+          <span class="day-label">수</span>
+          <span class="day-label">목</span>
+          <span class="day-label">금</span>
+          <span class="day-label sat">토</span>
+          <!-- 6월 1일 = 월요일, 빈칸 1개 -->
+          <span class="day empty"></span>
+          <span class="day">1</span>
+          <span class="day">2</span>
+          <span class="day">3</span>
+          <span class="day">4</span>
+          <span class="day">5</span>
+          <span class="day sat">6</span>
+          <span class="day sun">7</span>
+          <span class="day">8</span>
+          <span class="day">9</span>
+          <span class="day">10</span>
+          <span class="day">11</span>
+          <span class="day">12</span>
+          <span class="day highlight sat">13</span>
+          <span class="day sun">14</span>
+          <span class="day">15</span>
+          <span class="day">16</span>
+          <span class="day">17</span>
+          <span class="day">18</span>
+          <span class="day">19</span>
+          <span class="day sat">20</span>
+          <span class="day sun">21</span>
+          <span class="day">22</span>
+          <span class="day">23</span>
+          <span class="day">24</span>
+          <span class="day">25</span>
+          <span class="day">26</span>
+          <span class="day sat">27</span>
+          <span class="day sun">28</span>
+          <span class="day">29</span>
+          <span class="day">30</span>
+        </div>
+      </div>
+
+      <!-- 장소 -->
+      <div class="venue-info">
+        <h3 class="venue-name">더그랜드호텔 3층 그랜드볼룸</h3>
+        <p class="venue-address">서울 강남구 테헤란로 123</p>
+        <p class="venue-tel">Tel. 02-1234-5678</p>
+      </div>
+
+      <!-- 지도 -->
+      <div id="map"></div>
+      <div class="map-buttons">
+        <a href="https://map.kakao.com/" target="_blank" class="map-btn">카카오맵</a>
+        <a href="https://map.naver.com/" target="_blank" class="map-btn">네이버 지도</a>
+        <a href="https://map.kakao.com/" target="_blank" class="map-btn">길찾기</a>
+      </div>
+
+      <!-- 교통편 -->
+      <div class="transport">
+        <div class="transport-item">
+          <span class="transport-icon">🚇</span>
+          <div>
+            <p class="transport-label">지하철</p>
+            <p class="transport-desc">2호선 강남역 3번 출구 도보 5분</p>
+          </div>
+        </div>
+        <div class="transport-item">
+          <span class="transport-icon">🚗</span>
+          <div>
+            <p class="transport-label">주차</p>
+            <p class="transport-desc">호텔 지하주차장 이용 (2시간 무료)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 갤러리 -->
+    <section id="gallery" class="fade-in">
+      <h2 class="section-title">갤러리</h2>
+      <div class="section-divider"></div>
+      <div class="swiper gallery-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="images/main.png" alt="사진 1">
+          </div>
+          <div class="swiper-slide">
+            <img src="images/KakaoTalk_20260323_113224473_01.png" alt="사진 2">
+          </div>
+          <div class="swiper-slide">
+            <img src="images/main.png" alt="사진 3">
+          </div>
+          <div class="swiper-slide">
+            <img src="images/KakaoTalk_20260323_113224473_01.png" alt="사진 4">
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <!-- 풀스크린 모달 -->
+    <div id="gallery-modal" class="gallery-modal">
+      <span class="gallery-modal-close">&times;</span>
+      <img class="gallery-modal-img" src="" alt="">
     </div>
-    <div class="info">
-      <div class="littleTitle">INFO</div>
-      <table class="infoWrapper">
-        <tr>
-          <th class="infoLabel">이름</th>
-          <th>정민기</th>
-        </tr>
-        <tr>
-          <td class="infoLabel">출생년도</td>
-          <td>1992.01.15</td>
-        </tr>
-        <tr>
-          <td class="infoLabel">Email</td>
-          <td>mkultra0115@gmail.com</td>
-        </tr>
-        <tr>
-          <td class="infoLabel">Github</td>
-          <td><a href="https://github.com/mingi115">https://github.com/mingi115</a></td>
-        </tr>
-      </table>
-    </div>
-  </div>
-  <div class="education">
-    <div class="littleTitle">EDUCATION</div>
-    <table class="infoWrapper">
-      <tr>
-        <th class="infoTitle">
-          <p class="yearMonth">2021.04~2024.08</p>
-          <p class="title">국가평생진흥원<br>(학점은행제)</p>
-        </th>
-        <th class="infoContent"><br>컴퓨터공학과</th>
-      </tr>
-    </table>
-  </div>
-  <div class="license">
-    <div class="littleTitle">LICENSE</div>
-    <table class="infoWrapper licenseTable">
-      <tr>
-        <th class="licenseTitle" scope="col">&nbsp;&nbsp;자격증명</th>
-        <th class="licenseFrom" scope="col">&nbsp;&nbsp;발행처</th>
-        <th class="licenseDate" scope="col">&nbsp;&nbsp;취득일</th>
-      </tr>
-      <tr>
-        <td class="licenseTitle">정보처리기사</td>
-        <td class="licenseFrom">한국산업인력공단</td>
-        <td class="licenseDate">2024.06</td>
-      </tr>
-      <tr>
-        <td class="licenseTitle">SQLD_SQL 개발자</td>
-        <td class="licenseFrom">한국데이터산업진흥원</td>
-        <td class="licenseDate">2021.04</td>
-      </tr>
-      <tr>
-        <td class="licenseTitle">사무자동화산업기사</td>
-        <td class="licenseFrom">한국산업인력공단</td>
-        <td class="licenseDate">2021.12</td>
-      </tr>
-    </table>
-  </div>
-  <div class="skills">
-    <div class="littleTitle">SKILLS</div>
-    <table class="infoWrapper">
-      <tr>
-        <th class="infoTitle">
-          <p class="title"><b>Backend</b></p>
-        </th>
-        <th class="infoContent">
-          <ul>
-            <li>JAVA</li>
-            <li>Spring, 전자정부프레임워크</li>
-            <li>Postgrsql, PostGIS, PgRouting</li>
-            <li>Linux</li>
-          </ul>
-        </th>
-      </tr>
-      <tr>
-        <th class="infoTitle">
-          <p class="title"><b>Frontend</b></p>
-        </th>
-        <th class="infoContent">
-          <ul>
-            <li>JSP, JSTL</li>
-            <li>JQUERY</li>
-            <li>JavaScript</li>
-            <li>Openlayers, JSTS</li>
-            <li>HTML5, CSS3</li>
-          </ul>
-        </th>
-      </tr>
-      <tr>
-        <th class="infoTitle">
-          <p class="title"><b>Tools</b></p>
-        </th>
-        <th class="infoContent">
-          <ul>
-            <li>Git, GitHub</li>
-            <li>Postman</li>
-            <li>Eclipse, IntelliJ IDEA</li>
-            <li>DataGrip, PgAdmin</li>
-            <li>QGis, GeoServer</li>
-            <li>NHN Cloud</li>
-            <li>Jenkin, Docker, Kubernetes</li>
-          </ul>
-        </th>
-      </tr>
-    </table>
-  </div>
-  <div class="career">
-    <div class="bigTitle">💻CAREER</div>
-    <table class="infoWrapper">
-      <tr>
-        <th class="infoTitle">
-          <p class="yearMonth">2021.04~2024.02</p>
-          <p class="title">피타그래프</p>
-          <p class="yearMonth">대리</p>
-        </th>
-        <th class="infoContent">
-          데이터 거래 및 시각화 플랫폼 회사인 피타그래프에서 <br/>
-          시계열을 포함한 공간 데이터 조회 플랫폼의 개발 및 유지보수를 주로 맡았습니다.<br/>
-          해당 회사에서 새로 개발하는 프로젝트에 참여함으로써 기획, 설계, 개발 모두 참여 할 수 있었고,<br/>
-          나아가 사용자 및 관리자의 편의를 위한 추가 기능을 스스로 기획하고 성능을 개선하는 다양한 경험을 할수 있었습니다.<br/>
-          <br/>
-          하위 기술한 프로젝트에서<br/>
-          프론트엔드에서 Openlayers, JSTS, GeoServer를 활용한 지도 제어 부분을 맡았고<br/>
-          백엔드에선 API 서버 개발과 DB 데이터 관리를 맡았습니다.
-          <br/>
-          <br/>
-          <b>하이퍼맵</b>(20년4월 ~ 24년1월)<br/>
-          <ul>
-            <li>시간과 영역 그리고 데이터 종류를 선택하여 지도상에 시각화 하거나 데이터 다운로드가 주력인 프로젝트입니다.</li>
-            <li>기획, 설계, 개발 모두 참여한 프로젝트입니다.</li>
-            <li>프론트엔드에서 Openlayers, JSTS, GeoServer를 활용한 지도 제어 부분을 맡아 개발하였습니다.</li>
-            <li>백엔드에선 API 서버 일체와 DB 데이터 관리를 맡았습니다.</li>
-            <li>대표 개발 기능으로는 데이터 조회시 소지한 데이터와 다른 시간 단위에 대한 조회를 위해 데이터 합산 및 분할 기능이 있습니다.</li>
-            <li>직접 기획하고 개발한 기능으로는 시계열을 이용한 poi 및 주제도 재생 기능, <br/>
-              엑셀 파일을 이용한 poi 데이터 업로드, 지도 중심 좌표의 시군구 표시기능 등이 있습니다.</li>
-            <li>그 외 API 응답속도 개선 경험이 있습니다.</li>
-          </ul>
 
-          <br/>
-          <b>우리마을지도</b>(21년6월 ~ 23년12월)<br/>
-          <ul>
-            <li>하이퍼맵에서 poi 관련 기능을 다듬고 강화하여 지자체에 납품한 프로젝트입니다.</li>
-            <li>기획, 설계, 개발 모두 참여한 프로젝트입니다.</li>
-            <li>다량의 poi를 불러올 시 브라우저 버벅임을 해소하기 위해 네이버 지도를 모방하여,<br/>
-             최대 poi 갯수를 제한하고 지도를 확대 할수록 정확도를 높일 수 있도록 수정했습니다.</li>
-            <li>카카오 지도의 로드뷰 기능을 openlayers와 연동하여 사용자가 poi주변을 확인할 수 있도록 기능을 추가했습니다.</li>
-          </ul>
+    <!-- 축의금 -->
+    <section id="account" class="fade-in alt-bg">
+      <h2 class="section-title">축의금 안내</h2>
+      <div class="section-divider"></div>
+      <p class="account-desc">축하의 마음을 전해주세요</p>
 
-          <br/>
-          <b>상권분석</b>(20년6월 ~ 23년12월)<br/>
-          <ul>
-            <li>지자체의 상권 데이터를 지도상에 표현하여 한눈에 파악할 수 있게 하는 프로젝트 입니다.</li>
-            <li>대표기능으로 선택한 업종에 대한 상권 추천, 선택한 상권에 대한 데이터 보고서,<br/>
-              제로페이 및 온누리상품권 사용처 조회가 있습니다.</li>
-            <li>직접 기획하고 개발한 기능으로는 관리의 편의성 및 데이터 최신화를 위해 스프링 스케쥴러를 이용하여<br/>
-              매일 한국간편결제진흥원 API 통해 데이터를 업데이트하는 기능을 개발하였습니다.</li>
-          </ul>
-          <br/>
-          <b>오작</b>(23년4월 ~ 23년9월)<br/>
-          <ul>
-            <li>피타그래프의 그래프 시각화 플랫폼의 데이터 중계 프로젝트.</li>
-            <li>납품된 그래프 시각화 서비스간의 데이터를 검색하고 조회를 가능하도록 중계하는 API서버 개발.</li>
-          </ul>
-        </th>
-      </tr>
-    </table>
-  </div>
-  <div class="project">
-    <div class="bigTitle">🛠TOY PROJECT</div>
-    <table class="infoWrapper">
-      <tr>
-        <th class="infoTitle">
-          <p class="yearMonth">2022.12~2023.02</p>
-          <p class="title">drivingDistance</p>
-          <br/>
-          <img class="sampleImg" src="images/drivingDistance.png" alt="drivingDistance 프로젝트의 샘플사진" >
-        </th>
-        <th class="infoContent">
+      <div class="accordion">
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>신랑측 계좌</span>
+            <svg class="accordion-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="accordion-content">
+            <div class="account-row">
+              <p class="account-holder">정민기 (신랑)</p>
+              <p class="account-number">국민은행 123-456-789012</p>
+              <button class="copy-btn" data-account="123456789012">복사하기</button>
+            </div>
+            <div class="account-row">
+              <p class="account-holder">정○○ (아버지)</p>
+              <p class="account-number">우리은행 111-222-333444</p>
+              <button class="copy-btn" data-account="111222333444">복사하기</button>
+            </div>
+            <div class="account-row">
+              <p class="account-holder">정○○ (어머니)</p>
+              <p class="account-number">농협은행 555-666-777888</p>
+              <button class="copy-btn" data-account="555666777888">복사하기</button>
+            </div>
+          </div>
+        </div>
 
-          통계청의 지도 서비스 SGIS에서 제공하는 주행거리 기능을 사용해보고 <br/>
-          '아, 나도 이 기능을 구현해 보고 싶다.' 라는 생각으로 시작하게된 토이 프로젝트입니다.<br/>
-          특정 지점을 선택하여 설정한 주행거리 만큼의 주행거리 면적을 계산하여 지도위에 표시해주고<br/>
-          지점이 여러개일 경우 교집합을 구하여 하얀색 영역으로 표시해주는 기능을 가지고 있습니다.<br/>
-          해당 기능을 구현하기 위해 직접 PgRouting 공식문서를 번역하고 정리하며 걔발을 진행 해봤습니다.
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>신부측 계좌</span>
+            <svg class="accordion-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="accordion-content">
+            <div class="account-row">
+              <p class="account-holder">조지현 (신부)</p>
+              <p class="account-number">신한은행 987-654-321098</p>
+              <button class="copy-btn" data-account="987654321098">복사하기</button>
+            </div>
+            <div class="account-row">
+              <p class="account-holder">김○○ (아버지)</p>
+              <p class="account-number">하나은행 444-333-222111</p>
+              <button class="copy-btn" data-account="444333222111">복사하기</button>
+            </div>
+            <div class="account-row">
+              <p class="account-holder">김○○ (어머니)</p>
+              <p class="account-number">기업은행 888-777-666555</p>
+              <button class="copy-btn" data-account="888777666555">복사하기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <br/>
-          <br/><a href="https://drive.google.com/file/d/1dHQd5OVWZznSxVqxILs0z4s8ZbIp6o8c/view?usp=drive_link" target="_blank">pg routing을 활용한
-          주행거리 면적계산.pdf</a>
-        </th>
-      </tr>
-    </table>
+    <!-- D-Day 카운트다운 -->
+    <section id="countdown" class="fade-in">
+      <h2 class="section-title">D-Day</h2>
+      <div class="section-divider"></div>
+      <div class="countdown-display">
+        <div class="countdown-item">
+          <span class="countdown-number" id="cd-days">00</span>
+          <span class="countdown-label">DAYS</span>
+        </div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-item">
+          <span class="countdown-number" id="cd-hours">00</span>
+          <span class="countdown-label">HOURS</span>
+        </div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-item">
+          <span class="countdown-number" id="cd-minutes">00</span>
+          <span class="countdown-label">MIN</span>
+        </div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-item">
+          <span class="countdown-number" id="cd-seconds">00</span>
+          <span class="countdown-label">SEC</span>
+        </div>
+      </div>
+      <p class="countdown-message" id="cd-message"></p>
+    </section>
+
+    <!-- 푸터 -->
+    <footer>
+      <button class="share-btn" id="share-url">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+        링크 공유하기
+      </button>
+      <p class="footer-text">Thank you for celebrating with us</p>
+    </footer>
+
   </div>
 
+  <!-- 토스트 -->
+  <div id="toast" class="toast"></div>
 
-</div>
-<div class="modal">
-  <span class="close">&times;</span>
-  <img class="modalContent">
-</div>
-<script>
-  const modal = document.querySelector(".modal");
-  const img = document.querySelector(".sampleImg");
-  const modal_img = document.querySelector(".modalContent");
-  const span = document.querySelector(".close");
-
-  img.addEventListener('click', ()=>{
-    modalDisplay("block");
-    modal_img.src = img.src;
-  });
-  span.addEventListener('click', ()=>{
-    modalDisplay("none");
-  });
-  modal.addEventListener('click', ()=>{
-    modalDisplay("none");
-  });
-  function modalDisplay(text){
-    modal.style.display = text;
-  }
-
-</script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="index.js"></script>
 </body>
+</html>

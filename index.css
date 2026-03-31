@@ -376,11 +376,27 @@ section {
   display: flex;
 }
 
-.gallery-modal-img {
-  max-width: 95%;
+.modal-swiper {
+  width: 95vw;
+  cursor: default;
+}
+
+.modal-swiper .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-swiper .swiper-slide img {
+  max-width: 95vw;
   max-height: 90vh;
   object-fit: contain;
   border-radius: 4px;
+}
+
+.modal-swiper .swiper-button-prev,
+.modal-swiper .swiper-button-next {
+  color: #fff;
 }
 
 .gallery-modal-close {
@@ -595,4 +611,48 @@ footer {
 .toast.show {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
+}
+
+/* ===== Music Button ===== */
+#yt-player {
+  position: fixed;
+  top: -9999px;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+}
+
+.music-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 20px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1.5px solid #A682B8;
+  color: #A682B8;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1500;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.music-btn.playing {
+  background: #A682B8;
+  color: #fff;
+}
+
+.music-btn.playing .music-note {
+  display: inline-block;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
 }

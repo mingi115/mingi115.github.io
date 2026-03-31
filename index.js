@@ -10,7 +10,7 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
 // ===== D-Day Countdown =====
-const weddingDate = new Date('2026-06-13T12:00:00+09:00');
+const weddingDate = new Date('2026-06-13T11:20:00+09:00');
 
 function updateCountdown() {
   const now = new Date();
@@ -91,6 +91,18 @@ function showToast(msg) {
   setTimeout(() => toast.classList.remove('show'), 2000);
 }
 
+// ===== Gallery Fullscreen Modal =====
+const modal = document.getElementById('gallery-modal');
+const modalClose = modal.querySelector('.gallery-modal-close');
+
+const modalSwiper = new Swiper('.modal-swiper', {
+  loop: true,
+  navigation: {
+    nextEl: '.modal-swiper .swiper-button-next',
+    prevEl: '.modal-swiper .swiper-button-prev',
+  },
+});
+
 // ===== Swiper Gallery =====
 const swiper = new Swiper('.gallery-swiper', {
   loop: true,
@@ -99,18 +111,12 @@ const swiper = new Swiper('.gallery-swiper', {
     el: '.swiper-pagination',
     clickable: true,
   },
-});
-
-// ===== Gallery Fullscreen Modal =====
-const modal = document.getElementById('gallery-modal');
-const modalImg = modal.querySelector('.gallery-modal-img');
-const modalClose = modal.querySelector('.gallery-modal-close');
-
-document.querySelectorAll('.gallery-swiper .swiper-slide img').forEach(img => {
-  img.addEventListener('click', () => {
-    modalImg.src = img.src;
-    modal.classList.add('active');
-  });
+  on: {
+    click: function() {
+      modalSwiper.slideToLoop(this.realIndex, 0);
+      modal.classList.add('active');
+    }
+  }
 });
 
 modalClose.addEventListener('click', () => modal.classList.remove('active'));
@@ -118,12 +124,31 @@ modal.addEventListener('click', (e) => {
   if (e.target === modal) modal.classList.remove('active');
 });
 
-// ===== Map Placeholder =====
-// 카카오맵 API 키가 없으므로 플레이스홀더 표시
+// ===== Kakao Map =====
 const mapEl = document.getElementById('map');
-if (mapEl) {
-  mapEl.textContent = '지도를 표시하려면 카카오맵 API 키가 필요합니다';
-}
+if (mapEl) try {
+  if (typeof kakao === 'undefined') throw new Error('kakao not loaded');
+  const map = new kakao.maps.Map(mapEl, {
+    center: new kakao.maps.LatLng(37.5503, 126.9107),
+    level: 3
+  });
+
+  const geocoder = new kakao.maps.services.Geocoder();
+  geocoder.addressSearch('서울시 마포구 양화로 87', function(result, status) {
+    if (status === kakao.maps.services.Status.OK) {
+      const coords = new kakao.maps.LatLng(result[0].y, result[0].x);
+      const marker = new kakao.maps.Marker({ map, position: coords });
+      map.setCenter(coords);
+
+      const overlay = new kakao.maps.CustomOverlay({
+        position: coords,
+        content: '<div style="background:#fff;border:1px solid #bbb;border-radius:3px;padding:3px 7px;font-size:11px;font-family:sans-serif;white-space:nowrap;box-shadow:0 1px 3px rgba(0,0,0,0.2);">웨딩시그니처</div>',
+        yAnchor: 2.5
+      });
+      overlay.setMap(map);
+    }
+  });
+} catch(e) {}
 
 // ===== Share URL =====
 document.getElementById('share-url').addEventListener('click', () => {
@@ -139,6 +164,63 @@ document.getElementById('share-url').addEventListener('click', () => {
     document.body.removeChild(ta);
     showToast('링크가 복사되었습니다!');
   }
+});
+
+// ===== Background Music (YouTube) =====
+let ytPlayer;
+let musicReady = false;
+
+function initYTPlayer() {
+  ytPlayer = new YT.Player('yt-player', {
+    videoId: 'Z3bKEtU8MQ0',
+    playerVars: {
+      autoplay: 1,
+      mute: 1,
+      loop: 1,
+      playlist: 'Z3bKEtU8MQ0',
+      origin: window.location.origin
+    },
+    events: {
+      onReady: () => {
+        musicReady = true;
+        ytPlayer.playVideo();
+        // 1단계: 프로그래밍 클릭 시도
+        musicBtn.click();
+        // 2단계: 첫 인터랙션 시 언뮤트 (아직 뮤트 상태일 경우)
+        const events = ['click', 'touchstart', 'scroll'];
+        function onFirstInteraction(e) {
+          if (musicBtn.contains(e.target)) return;
+          if (ytPlayer.isMuted()) musicBtn.click();
+          events.forEach(ev => document.removeEventListener(ev, onFirstInteraction));
+        }
+        events.forEach(ev => document.addEventListener(ev, onFirstInteraction, { passive: true }));
+      },
+      onError: () => { musicReady = false; }
+    }
+  });
+}
+
+
+if (window.YT && window.YT.Player) {
+  initYTPlayer();
+} else {
+  window.onYouTubeIframeAPIReady = initYTPlayer;
+}
+
+const musicBtn = document.getElementById('music-btn');
+musicBtn.addEventListener('click', () => {
+  if (!ytPlayer) return;
+  try {
+    if (ytPlayer.isMuted()) {
+      ytPlayer.unMute();
+      setTimeout(() => {
+        if (!ytPlayer.isMuted()) musicBtn.classList.add('playing');
+      }, 100);
+    } else {
+      ytPlayer.mute();
+      musicBtn.classList.remove('playing');
+    }
+  } catch(e) {}
 });
 
 // ===== Scroll Indicator =====
